@@ -2,7 +2,7 @@
 
 Site personnel qui présente mon parcours, mes stages, mes projets et mes compétences.
 C'est un site statique en HTML, CSS et JavaScript, sans framework et sans étape de compilation.
-Il est prêt à être publié sur Vercel.
+Il est publié sur GitHub Pages.
 
 Adresse de production : à remplacer par la vôtre après le premier déploiement.
 
@@ -36,7 +36,7 @@ automatiquement à partir des données. Il n'y a rien à modifier à la main.
 Ce choix a plusieurs avantages :
 
 - pas de `npm install` ni de build avant publication
-- Vercel sert directement les fichiers du dépôt
+- GitHub Pages sert directement les fichiers du dépôt
 - le site reste rapide et simple à maintenir
 - une panne de dépendance ne peut pas casser la mise en ligne
 
@@ -51,7 +51,7 @@ utilisera les polices système.
 ```
 khalilcvprotf/
 ├── index.html                     structure de la page
-├── vercel.json                    configuration Vercel (cache, en-têtes de sécurité)
+├── vercel.json                    configuration pour un futur hébergement (facultatif)
 ├── robots.txt                     règles pour les moteurs de recherche
 ├── sitemap.xml                    plan du site
 ├── .gitignore                     fichiers exclus de Git
@@ -231,28 +231,16 @@ Un portrait carré fonctionne mieux, car le cadre est arrondi et la photo est re
 
 ---
 
-## 7. Publier sur GitHub
+## 7. Le dépôt GitHub
 
-Git n'est pas installé sur cette machine. Installez-le d'abord :
+Le projet est déjà versionné et publié ici :
 
-https://git-scm.com/download/win
+https://github.com/khaalilbenali/khalil-portfolio
 
-Laissez les options par défaut, puis ouvrez un nouveau terminal et vérifiez :
+Git et GitHub CLI sont installés sur cette machine, et la session ouverte est celle du compte
+`khaalilbenali`. Il n'y a donc rien à recréer.
 
-```powershell
-git --version
-```
-
-### 7.1 Créer le dépôt
-
-1. Ouvrez https://github.com et connectez-vous.
-2. Cliquez sur le bouton `+` en haut à droite, puis **New repository**.
-3. Nom du dépôt : `khalil-portfolio`.
-4. Visibilité : **Public** (Vercel lit aussi les dépôts privés).
-5. Ne cochez aucune case (pas de README, pas de .gitignore).
-6. Cliquez sur **Create repository**.
-
-### 7.2 Envoyer les fichiers
+Si un jour le dépôt doit être reconstruit depuis zéro :
 
 ```powershell
 cd C:\Users\Pc\Desktop\khalilcvprotf
@@ -261,58 +249,63 @@ git init
 git branch -M main
 git add .
 git commit -m "Portfolio initial - Khalil Ben Ali"
-git remote add origin https://github.com/VOTRE-COMPTE/khalil-portfolio.git
+git remote add origin https://github.com/khaalilbenali/khalil-portfolio.git
 git push -u origin main
 ```
 
-Remplacez `VOTRE-COMPTE` par votre identifiant GitHub.
-
-Au premier `push`, une fenêtre de connexion GitHub peut s'ouvrir. Sinon, Git demande un mot de
-passe : utilisez un token personnel (voir la section Dépannage).
-
-Les fichiers `.docx` et les PDF de travail présents dans le dossier ne seront pas envoyés :
+Les fichiers `.docx` et les PDF de travail présents dans le dossier ne sont pas envoyés :
 ils sont listés dans `.gitignore`.
 
 ---
 
-## 8. Déployer sur Vercel
+## 8. Hébergement sur GitHub Pages
 
-1. Ouvrez https://vercel.com et cliquez sur **Sign Up**.
-2. Choisissez **Continue with GitHub** et autorisez l'accès aux dépôts.
-3. Sur le tableau de bord, cliquez sur **Add New...** puis **Project**.
-4. Sélectionnez le dépôt `khalil-portfolio` et cliquez sur **Import**.
-5. Dans la configuration, laissez les valeurs suivantes :
+Le site est publié automatiquement par GitHub Pages à chaque envoi sur la branche `main`.
+Aucun compte supplémentaire n'est nécessaire, et aucun numéro de téléphone n'est demandé.
 
-| Champ | Valeur |
-| --- | --- |
-| Framework Preset | Other |
-| Root Directory | `./` |
-| Build Command | vide |
-| Output Directory | vide |
-| Install Command | vide |
+Adresse du site :
 
-6. Cliquez sur **Deploy**.
+https://khaalilbenali.github.io/khalil-portfolio/
 
-Le site est en ligne en moins d'une minute. L'adresse ressemble à
-`https://khalil-portfolio.vercel.app`.
+### Vérifier la configuration (déjà en place)
 
-Pour une adresse plus courte, allez dans **Settings**, **Project Name**, et renommez le projet
-en `khalil-ben-ali`. L'adresse devient alors `https://khalil-ben-ali.vercel.app`.
+1. Ouvrez le dépôt sur GitHub.
+2. Allez dans **Settings**, puis **Pages**.
+3. La source doit être **Deploy from a branch**.
+4. Branche : `main`, dossier : `/ (root)`.
+5. Cliquez sur **Save** si ce n'est pas déjà fait.
 
-Chaque `push` sur la branche `main` déclenchera un nouveau déploiement automatique.
+La première publication prend une à deux minutes. Le fichier `.nojekyll` présent à la racine
+évite que GitHub transforme les fichiers du site.
+
+### Changer d'hébergeur
+
+Netlify fonctionne de la même manière et ne demande pas de numéro de téléphone :
+
+1. Ouvrez https://app.netlify.com et connectez-vous avec GitHub.
+2. Cliquez sur **Add new site**, puis **Import an existing project**.
+3. Choisissez GitHub, puis le dépôt `khalil-portfolio`.
+4. Build command : vide. Publish directory : `.`
+5. Cliquez sur **Deploy site**.
+
+L'adresse ressemble à `https://khalil-portfolio.netlify.app`.
+Pensez ensuite à mettre à jour `index.html`, `robots.txt` et `sitemap.xml` avec cette adresse.
+
+Cloudflare Pages fonctionne aussi sans téléphone : https://pages.cloudflare.com
 
 ---
 
-## 9. Après la première mise en ligne
+## 9. Adresse du site et référencement
 
-Une fois l'adresse réelle connue, remplacez `https://khalil-ben-ali.vercel.app` par la vôtre
-dans trois fichiers :
+L'adresse actuelle est `https://khaalilbenali.github.io/khalil-portfolio/`.
+Elle est déjà renseignée dans trois fichiers :
 
-- `index.html` : balise `<link rel="canonical">` et balise `og:url`
+- `index.html` : balise `<link rel="canonical">`
 - `robots.txt` : ligne `Sitemap:`
 - `sitemap.xml` : balise `<loc>`
 
-Puis publiez la modification (voir la section suivante).
+Si l'adresse change (domaine personnel ou autre hébergeur), remplacez-la dans ces trois
+fichiers, puis publiez avec `git push`.
 
 ---
 
@@ -328,13 +321,13 @@ git commit -m "Ajout du stage No Limits Embedded"
 git push
 ```
 
-Vercel détecte le `push` et republie le site automatiquement. Il n'y a aucune commande de
-déploiement à lancer.
+GitHub Pages republie le site automatiquement en une à deux minutes. Il n'y a aucune commande
+de déploiement à lancer.
 
-Pour suivre la publication : tableau de bord Vercel, onglet **Deployments**.
+Pour suivre la publication : dépôt GitHub, onglet **Actions**, ou **Settings** puis **Pages**.
 
-Pour revenir à une version précédente : ouvrez le déploiement concerné, cliquez sur les trois
-points, puis sur **Promote to Production**.
+En cas de problème, forcez un nouveau build : **Settings**, **Pages**, changez la branche,
+enregistrez, puis remettez `main`.
 
 ### Messages de commit utiles
 
@@ -352,15 +345,16 @@ Un message court et précis suffit. Il sert à retrouver une modification dans l
 ## 11. Nom de domaine personnel (optionnel)
 
 1. Achetez un domaine chez un registrar, par exemple `khalilbenali.tn` ou `khalil-ben-ali.dev`.
-2. Dans Vercel, ouvrez le projet, puis **Settings** et **Domains**.
-3. Cliquez sur **Add** et saisissez le domaine.
-4. Vercel affiche les enregistrements DNS à créer chez le registrar :
-   - domaine racine (`exemple.com`) : enregistrement **A** vers `76.76.21.21`
-   - sous-domaine (`www`) : enregistrement **CNAME** vers `cname.vercel-dns.com`
-5. Ajoutez ces enregistrements dans l'interface du registrar.
-6. Attendez la propagation, de quelques minutes à 24 heures.
+2. Dans le dépôt GitHub, ouvrez **Settings**, puis **Pages**.
+3. Dans **Custom domain**, saisissez le domaine et cliquez sur **Save**.
+4. Chez le registrar, créez les enregistrements DNS :
+   - domaine racine (`exemple.com`) : quatre enregistrements **A** vers
+     `185.199.108.153`, `185.199.109.153`, `185.199.110.153` et `185.199.111.153`
+   - sous-domaine (`www`) : enregistrement **CNAME** vers `khaalilbenali.github.io`
+5. Attendez la propagation, de quelques minutes à 24 heures.
+6. Une fois le domaine vérifié, cochez **Enforce HTTPS** dans les réglages Pages.
 
-Vercel crée et renouvelle automatiquement le certificat HTTPS.
+GitHub fournit et renouvelle automatiquement le certificat HTTPS.
 
 ---
 
@@ -419,15 +413,14 @@ GitHub, **Settings**, **Developer settings**, **Personal access tokens**, **Toke
 **Generate new token**, cochez la portée `repo`, créez le token, puis collez-le à la place du
 mot de passe.
 
-**La page s'affiche sans style sur Vercel**
+**La page s'affiche sans style sur GitHub Pages**
 
 Vérifiez que le fichier s'appelle bien `index.html`, en minuscules, à la racine du dépôt.
 Vérifiez aussi que le dossier `assets` a bien été envoyé.
 
 **Une modification n'apparaît pas**
 
-Attendez la fin du déploiement dans l'onglet **Deployments**, puis rechargez avec `Ctrl + F5`
-pour vider le cache du navigateur.
+Attendez une à deux minutes, puis rechargez avec `Ctrl + F5` pour vider le cache du navigateur.
 
 Vérifiez que le commit a bien été poussé :
 
@@ -435,9 +428,10 @@ Vérifiez que le commit a bien été poussé :
 git log --oneline -3
 ```
 
-**Vercel affiche une erreur 404**
+**GitHub Pages affiche une erreur 404**
 
-Dans **Settings**, **General**, le champ *Root Directory* doit être vide ou `./`.
+Dans **Settings**, **Pages**, vérifiez que la source est **Deploy from a branch**, branche
+`main`, dossier `/ (root)`. Attendez la fin du premier build.
 
 **Les accents s'affichent mal**
 
