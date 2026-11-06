@@ -1,0 +1,23 @@
+# Dépendances / node
+node_modules/
+.npm/
+
+# Fichiers sources du CV (les versions de travail ne sont pas publiées)
+*.docx
+~$*
+/khalil_cv.pdf
+/main*.pdf
+
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b5f80" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b1117" media="(prefers-color-scheme: dark)">
+
+  <title>Khalil Ben Ali · Étudiant Ingénieur en Génie Informatique · IoT &amp; Robotique</title>
+  <meta name="description" content="Portfolio de Khalil Ben Ali, étudiant ingénieur en Génie Informatique (spécialisation IoT et Robotique) à Sousse, Tunisie : expériences, projets embarqués, formations et compétences.">
+  <meta name="author" content="Khalil Ben Ali">
+  <link rel="canonical" href="https://khalil-ben-ali.vercel.app/">
+
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Khalil Ben Ali · Portfolio">
+  <meta property="og:title" content="Khalil Ben Ali · Étudiant Ingénieur en Génie Informatique · IoT &amp; Robotique">
+  <meta property="og:description" content="Systèmes embarqués, IoT, cloud et applications connectées. Stages et projets académiques.">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:image" content="assets/img/profile.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Khalil Ben Ali · Portfolio">
+  <meta name="twitter:description" content="Étudiant ingénieur en Génie Informatique, spécialité IoT et Robotique.">
+  <meta name="twitter:image" content="assets/img/profile.jpg">
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/avatar.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+  <!-- ============================ EN-TÊTE ============================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a class="brand" href="#accueil" aria-label="Khalil Ben Ali, retour en haut de la page">
+        <span class="brand__mark" id="brandMark" aria-hidden="true">KB</span>
+        <span class="brand__text">
+          <span class="brand__name" id="brandName">Khalil Ben Ali</span>
+          <span class="brand__role" id="brandRole">Génie Informatique · IoT</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#profil">Profil</a></li>
+          <li><a class="nav__link" href="#experiences">Expériences</a></li>
+          <li><a class="nav__link" href="#projets">Projets</a></li>
+          <li><a class="nav__link" href="#formation">Formation</a></li>
+          <li><a class="nav__link" href="#competences">Compétences</a></li>
+          <li><a class="nav__link" href="#certifications">Certifications</a></li>
+          <li><a class="nav__link nav__link--cta" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" type="button"
+              aria-expanded="false" aria-controls="primaryNav" aria-label="Ouvrir le menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="accueil">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__availability" id="heroAvailability">
+            <span class="dot" aria-hidden="true"></span>
+            <span id="heroAvailabilityText">Ouvert à un stage de fin d’études (PFE)</span>
+          </p>
+
+          <h1 class="hero__title">
+            <span class="hero__hello">Bonjour, je suis</span>
+            <span class="hero__name" id="heroName">Khalil Ben Ali</span>
+          </h1>
+
+          <p class="hero__role" id="heroRole">
+            Étudiant Ingénieur en Génie Informatique
+            <span class="hero__role-sub">Spécialisation IoT et Robotique</span>
+          </p>
+
+          <p class="hero__lead" id="heroLead"></p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#experiences" id="heroCta">Voir mes expériences</a>
+            <a class="btn btn--ghost" href="#" id="heroCvBtn" download>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/>
+              </svg>
+              <span id="heroCvLabel">Télécharger le CV</span>
+            </a>
+            <a class="btn btn--ghost" href="#" id="heroLinkedin" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor">
+                <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM2.4 9.5h5.2V21H2.4V9.5Zm7.6 0h4.98v1.57h.07c.69-1.24 2.38-2.55 4.9-2.55 5.24 0 6.2 3.3 6.2 7.6V21h-5.2v-4.9c0-1.17-.02-2.67-1.7-2.67-1.7 0-1.96 1.26-1.96 2.58V21h-5.18V9.5h.87Z"/>
+              </svg>
+              LinkedIn
+            </a>
+            <a class="btn btn--ghost" href="#" id="heroGithub" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor">
+                <path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/>
+              </svg>
+              GitHub
+            </a>
+          </div>
+
+          <ul class="hero__contact" id="heroContact"></ul>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__photo-frame">
+            <img id="heroPhoto" src="assets/img/profile.jpg"
+                 alt="Portrait de Khalil Ben Ali" width="512" height="512" loading="eager">
+          </div>
+          <dl class="hero__stats" id="heroStats"></dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PROFIL ============================ -->
+    <section class="section" id="profil">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">Profil</span>
+          <h2 class="section__title">À propos de moi</h2>
+          <p class="section__lead">Ingénieur en formation, passionné par les systèmes embarqués, l’IoT et le cloud.</p>
+        </header>
+        <div class="profile-grid">
+          <div class="prose reveal" id="profileText"></div>
+          <ul class="highlights reveal" id="profileHighlights"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ EXPÉRIENCES ============================ -->
+    <section class="section section--alt" id="experiences">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">Parcours</span>
+          <h2 class="section__title">Expériences professionnelles</h2>
+          <p class="section__lead">Six stages en systèmes embarqués, IoT industriel, robotique, ingénierie systèmes connectés, radiodiffusion et télécommunications.</p>
+        </header>
+        <ol class="timeline" id="experienceList"></ol>
+      </div>
+    </section>
+
+    <!-- ============================ PROJETS ============================ -->
+    <section class="section" id="projets">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">Réalisations</span>
+          <h2 class="section__title">Projets académiques</h2>
+          <p class="section__lead">Systèmes IoT, robotique et intelligence artificielle développés en équipe.</p>
+        </header>
+        <div class="cards cards--2" id="projectList"></div>
+      </div>
+    </section>
+
+    <!-- ============================ FORMATION ============================ -->
+    <section class="section section--alt" id="formation">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">Diplômes</span>
+          <h2 class="section__title">Formation</h2>
+        </header>
+        <ol class="timeline timeline--edu" id="educationList"></ol>
+      </div>
+    </section>
+
+    <!-- ============================ COMPÉTENCES ============================ -->
+    <section class="section" id="competences">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">Savoir-faire</span>
+          <h2 class="section__title">Compétences techniques</h2>
+        </header>
+        <div class="cards cards--skills" id="skillsList"></div>
+      </div>
+    </section>
+
+    <!-- ============================ CERTIFICATIONS + LANGUES ============================ -->
+    <section class="section section--alt" id="certifications">
+      <div class="container">
+        <div class="split">
+          <div>
+            <header class="section__head section__head--left reveal">
+              <span class="section__eyebrow">Distinctions</span>
+              <h2 class="section__title">Certifications</h2>
+            </header>
+            <ul class="certs" id="certList"></ul>
+          </div>
+          <div>
+            <header class="section__head section__head--left reveal">
+              <span class="section__eyebrow">Communication</span>
+              <h2 class="section__title">Langues</h2>
+            </header>
+            <ul class="langs" id="langList"></ul>
+
+            <header class="section__head section__head--left reveal" style="margin-top:3rem">
+              <span class="section__eyebrow">Engagement</span>
+              <h2 class="section__title">Activités associatives</h2>
+            </header>
+            <ul class="certs" id="assocList"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CONTACT ============================ -->
+    <section class="section section--contact" id="contact">
+      <div class="container">
+        <div class="contact">
+          <div class="contact__intro reveal">
+            <span class="section__eyebrow">Contact</span>
+            <h2 class="section__title">Parlons de votre projet</h2>
+            <p class="contact__text" id="contactIntro"></p>
+            <ul class="contact__list" id="contactList"></ul>
+          </div>
+          <div class="contact__card reveal">
+            <h3 class="contact__card-title">Coordonnées rapides</h3>
+            <p class="contact__card-text">Réponse rapide par e-mail ou par téléphone.</p>
+            <a class="btn btn--primary btn--block" href="#" id="contactMailBtn">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>
+              </svg>
+              <span id="contactMailLabel">khaalil.benali@gmail.com</span>
+            </a>
+            <a class="btn btn--ghost btn--block" href="#" id="contactPhoneBtn">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/>
+              </svg>
+              <span id="contactPhoneLabel">+216 92 315 464</span>
+            </a>
+            <div class="contact__socials">
+              <a class="icon-btn" href="#" id="contactLinkedin" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor">
+                  <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM2.4 9.5h5.2V21H2.4V9.5Zm7.6 0h4.98v1.57h.07c.69-1.24 2.38-2.55 4.9-2.55 5.24 0 6.2 3.3 6.2 7.6V21h-5.2v-4.9c0-1.17-.02-2.67-1.7-2.67-1.7 0-1.96 1.26-1.96 2.58V21h-5.18V9.5h.87Z"/>
+                </svg>
+              </a>
+              <a class="icon-btn" href="#" id="contactGithub" target="_blank" rel="noopener noreferrer" aria-label="Dépôt GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor">
+                  <path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ PIED DE PAGE ============================ -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__copy">
+        © <span id="currentYear">2026</span> <span id="footerName">Khalil Ben Ali</span>. Tous droits réservés.
+      </p>
+      <ul class="site-footer__links" id="footerLinks"></ul>
+    </div>
+  </footer>
+
+  <noscript>
+    <div class="noscript">
+      Ce site utilise JavaScript pour afficher le contenu du CV.
+      Vous pouvez consulter le CV en PDF : <a href="assets/cv/Khalil-Ben-Ali-CV.pdf">Télécharger le CV</a>
+      ou me contacter à <a href="mailto:khaalil.benali@gmail.com">khaalil.benali@gmail.com</a>.
+    </div>
+  </noscript>
+
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
